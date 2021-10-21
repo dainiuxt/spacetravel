@@ -47,7 +47,6 @@ select {
 }
 
 /* remove animations for people who've turned them off */
-
 @media (prefers-reduced-motion: reduce) {  
     *,
     *::before,
@@ -58,3 +57,37 @@ select {
       scroll-behavior: auto !important;
     }
   }
+
+/* -----------------*/
+/*  utility classes */
+/* -----------------*/
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+/* Screen reader only class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
+  
